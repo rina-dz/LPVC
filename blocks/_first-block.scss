@@ -1,0 +1,90 @@
+.first-block {
+    background-image: var(--color-gradient);
+    color: var(--color-white);
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        z-index: 2;
+        max-width: 630px;
+        margin: 145px auto 121px 172px;
+    }
+
+    &__title {
+        @include text-Mntrt(46px, 52px, 700);
+        margin: 0 0 35px;
+    }
+
+    &__text {
+        @include text-OS(20px, 28px);
+        max-width: 522px;
+        margin: 0 0 65px;
+    }
+
+    &__button {
+        @include button;
+        @include text-Mntrt(12px, 15px, 600);
+        width: 185px;
+    }
+
+    &__light-button {
+        background-color: var(--color-white);
+        color: var(--color-purple);
+        margin-right: 20px;
+    }
+
+    &__dark-button {
+        background-color: transparent;
+        color: var(--color-white);
+        outline: var(--color-white) 1px solid;
+    }
+
+    &__tip {
+        @include text-OS(14px, 18px);
+        display: block;
+        margin-top: 18px;
+        width: 467px;
+    }
+
+    &__background-img {
+        &:nth-child(1) {
+            @include bgImg(965px, 965px, -378px);
+            z-index: 1;
+            left: -304px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            @include bgImg(82px, 70px, 150px);
+            z-index: 1;
+        }
+
+        &:nth-child(2) {
+            right: 598px;
+        }
+
+        &:nth-child(3) {
+            right: 498px;
+        }
+
+        &:nth-child(4) {
+            @include bgImg(86px, 70px, 607px);
+            z-index: 1;
+            right: 359px;
+        }
+
+        &:nth-child(5) {
+            @include bgImg(121px, 121px, 280px);
+            z-index: 1;
+            right: 64px;
+        }
+
+        &:nth-child(6) {
+            @include bgImg(561px, 511px, 180px);
+            z-index: 1;
+            right: 89px;
+        }
+    }
+}

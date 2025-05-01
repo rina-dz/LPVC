@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 76.11%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+
+    &__logo-place {
+        @include text-Mntrt(18px, 22px, 700);
+        margin: 0;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        column-gap: 31px;
+    }
+
+    &__li {
+        @include text-Mntrt(14px, 17px, 500);
+    }
+}

@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 76.11%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 69px 0 53px;
+
+    &__logo-place {
+        @include text-Mntrt(18px, 22px, 700);
+        color: var(--color-purple);
+        align-self: center;
+        margin: 0;
+    }
+
+    &__container {
+        text-align: right;
+    }
+
+    &__logo {
+        width: 30px;
+        height: 30px;
+        margin-left: 18px;
+    }
+
+    &__text {
+        @include text-OS(16px, 22px);
+        color: var(--color-purple);
+        margin: 26px 0 0;
+    }
+}

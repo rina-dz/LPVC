@@ -1,0 +1,36 @@
+@mixin text-OS ($font-size, $line-height) {
+    font-family: var(--font-OpenSans);
+    font-weight: 400;
+    text-align: left;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin text-Mntrt ($font-size, $line-height, $font-weight) {
+    font-family: var(--font-Montserrat);
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin button {
+    height: 50px;
+    border-radius: 5px;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@mixin bgImg ($width, $height, $top) {
+    position: absolute;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    object-fit: contain;
+    width: $width;
+    height: $height;
+    top: $top;
+}

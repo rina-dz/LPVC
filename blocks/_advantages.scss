@@ -1,0 +1,40 @@
+.advantages {
+    box-shadow: inset 0px 0px 280px 0px rgba(175, 161, 249, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 55px 0 25px;
+    color: var(--color-white);
+
+    &__container {
+        display: block;
+        text-align: center;
+        width: 76.11%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__li {
+        @include text-Mntrt(16px, 20px, 600);
+        display: inline-block;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+        width: min-content;
+        padding: 25px 50px;
+        margin-bottom: 30px;
+        border: 2px solid var(--color-white);
+        border-radius: 100px;
+
+        &:not(:nth-child(3n)) {
+            margin-right: 20px;
+        }
+
+        &:first-child {
+            border: 2px solid var(--color-yellow);
+            color: var(--color-yellow);
+        }
+    }
+
+}
