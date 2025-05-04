@@ -9,7 +9,7 @@
         display: block;
         text-align: center;
         width: 76.11%;
-        max-width: 1440px;
+        max-width: 1170px;
         margin: 0 auto;
         padding: 0;
         list-style: none;
@@ -37,4 +37,10 @@
         }
     }
 
+    @media screen and (max-width: 520px) {
+        &__li {
+            font-size: 2.7vw;
+            padding: 13.5px 25px;
+        }
+    }
 }

@@ -1,6 +1,9 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 175px auto;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 26px;
+    column-gap: 150px;
     width: 76.11%;
     max-width: 1440px;
     margin: 0 auto;
@@ -8,24 +11,65 @@
 
     &__logo-place {
         @include text-Mntrt(18px, 22px, 700);
+        grid-row: 1/-1;
         color: var(--color-purple);
         align-self: center;
-        margin: 0;
+        margin: 17px 0 auto 0;
     }
 
     &__container {
-        text-align: right;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 auto;
+        padding: 0;
     }
 
     &__logo {
-        width: 30px;
-        height: 30px;
+        width: auto;
+        height: auto;
         margin-left: 18px;
+        object-fit: contain;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &:first-child {
+            margin-left: 0
+        }
     }
 
     &__text {
         @include text-OS(16px, 22px);
         color: var(--color-purple);
-        margin: 26px 0 0;
+        grid-column: 2;
+        width: clamp(150px, 100%, 415px);
+        text-align: right;
+        margin: 0 0 0 auto;
+    }
+
+    @media screen and (max-width: 750px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+        row-gap: 15px;
+
+        &__logo-place,
+        &__container,
+        &__text {
+            margin: 0;
+            align-self: self-start;
+            text-align: left;
+            width: fit-content;
+        }
+
+        &__logo-place {
+            margin-bottom: 5px;
+        }
     }
 }

@@ -21,6 +21,12 @@
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.85;
+    }
 }
 
 @mixin bgImg ($width, $height, $top) {
